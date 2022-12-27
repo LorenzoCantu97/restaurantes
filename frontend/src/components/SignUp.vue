@@ -24,13 +24,13 @@
             async signUp(){
                 const validacion = this.validate();
                 if(!validacion) return false;
-
+                
                 const userInfo = {
                     nombre: this.name,
                     correo: this.email,
                     pwd: this.pwd
                 };
-
+                
                 let results = await axios.post('http://localhost:3000/users', userInfo);
                 
                 //console.warn('RESULTS :')
@@ -65,42 +65,5 @@
 </script>
 
 <style>
-    
-    .logo {
-        width: 340px;
-    }
-    .register input {
-        width: 300px;
-        height: 40px;
-        padding: 9px;
-        display: block;
-        margin-bottom: 25px;
-        margin-right: auto;
-        margin-left: auto;
-        border: 0px;
-        border-bottom: 1px solid skyblue;
-    }
-    .register input:hover{
-        padding-bottom: 7px;
-        border-bottom: 3px solid rgb(96, 189, 226);
-    }
-    .register input:focus {
-        outline: none;
-        padding-bottom: 7px;
-        border-bottom: 3px solid rgb(96, 189, 226);
-    }
-    .register button {
-        width: 318px;
-        height: 35px;
-        color: white;
-        font-weight: bold;
-        border-radius: 11px;
-        border: 2px solid skyblue;
-        background-color: skyblue;
-        cursor: pointer;
-    }
-    .register button:hover {
-        color: black;
-        border: 3px solid rgb(54, 168, 212);
-    }
+ 
 </style>

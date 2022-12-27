@@ -7,7 +7,7 @@
         name: 'HomePage',
         mounted() {
             let userInfo = localStorage.getItem('user_info');
-            if(!userInfo) { this.$router.push({name: 'SignUp'}) } 
+            if(!userInfo) { this.$router.push({name: 'Login'}) } 
         }
     }
 </script>
