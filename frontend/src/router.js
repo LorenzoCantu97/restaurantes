@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './components/HomePage.vue';
 import SignUp from './components/SignUp.vue';
 import Login from './components/LogIn.vue';
+import AddPage from './components/AddPage.vue';
+import UpdatedPage from './components/UpdatePage.vue';
 
 const routes = [
     {
@@ -19,6 +21,16 @@ const routes = [
         name: 'Login',
         component: Login,
         path: '/login'
+    },
+    {
+        name: 'AddPage',
+        component: AddPage,
+        path: '/add'
+    },
+    {
+        name: 'UpdatePage',
+        component: UpdatedPage,
+        path: '/update'
     }
 ];
 
